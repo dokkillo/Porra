@@ -1,7 +1,12 @@
-	var jsonResult = '{"status": "success", "employees" : [{ "id": 1, "name": "Gabi", "department": "finance" , "PortugalGoals": "2" , "GalesGoals": "1", "AlemaniaGoals": "1", "FranciaGoals": "1"   }, { "id": 2, "name": "Luis", "department": "admin" , "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "5", "FranciaGoals": "1"  }, 	 { "id": 3, "name": "Carlos", "department": "marketing", "PortugalGoals": "2" , "GalesGoals": "4", "AlemaniaGoals": "1", "FranciaGoals": "3" } ]}';
+	var jsonResult = '{"status": "success", "employees" : [{ "id": 1, "name": "Gabi", "department": "finance" , "PortugalGoals": "2" , "GalesGoals": "1", "AlemaniaGoals": "1", "FranciaGoals": "1"   }, { "id": 2, "name": "Luis", "department": "admin" , "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "5", "FranciaGoals": "1"  }, 	 { "id": 3, "name": "Carlos", "department": "marketing", "PortugalGoals": "2" , "GalesGoals": "4", "AlemaniaGoals": "1", "FranciaGoals": "3" }, { "id": 4, "name": "Jorge", "department": "marketing", "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "2", "FranciaGoals": "3" }, { "id": 5, "name": "Miguel C.", "department": "marketing", "PortugalGoals": "4" , "GalesGoals": "0", "AlemaniaGoals": "0", "FranciaGoals": "0" } ]}';
 	
 	var result = JSON.parse(jsonResult);
 	var employees = {};
+	
+	$( document ).ready(function() {
+		
+		CalculateValues();
+	});
 
 	for (var i = 0, emp; i < result.employees.length; i++)
 	{
