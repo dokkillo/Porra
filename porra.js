@@ -1,4 +1,4 @@
-	var jsonResult = '{"status": "success", "employees" : [{ "id": 1, "name": "Gabi", "department": "finance" , "PortugalGoals": "2" , "GalesGoals": "1", "AlemaniaGoals": "1", "FranciaGoals": "1"   }, { "id": 2, "name": "Luis", "department": "admin" , "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "5", "FranciaGoals": "1"  }, 	 { "id": 3, "name": "Carlos", "department": "marketing", "PortugalGoals": "2" , "GalesGoals": "4", "AlemaniaGoals": "1", "FranciaGoals": "3" }, { "id": 4, "name": "Jorge", "department": "marketing", "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "2", "FranciaGoals": "3" }, { "id": 5, "name": "Miguel C.", "department": "marketing", "PortugalGoals": "4" , "GalesGoals": "0", "AlemaniaGoals": "0", "FranciaGoals": "0" } ]}';
+	var jsonResult = '{"status": "success", "employees" : [{ "id": 1, "name": "Gabi", "department": "IT" , "PortugalGoals": "2" , "GalesGoals": "1", "AlemaniaGoals": "1", "FranciaGoals": "1"}, { "id": 2, "name": "Luis", "department": "talent" , "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "5", "FranciaGoals": "1"  }, 	 { "id": 3, "name": "Carlos", "department": "Pensiones", "PortugalGoals": "2" , "GalesGoals": "4", "AlemaniaGoals": "1", "FranciaGoals": "3" }, { "id": 4, "name": "Jorge", "department": "IT", "PortugalGoals": "0" , "GalesGoals": "1", "AlemaniaGoals": "2", "FranciaGoals": "3" }, { "id": 5, "name": "Miguel C.", "department": "talent", "PortugalGoals": "4" , "GalesGoals": "0", "AlemaniaGoals": "0", "FranciaGoals": "0" } ]}';
 	
 	var result = JSON.parse(jsonResult);
 	var employees = {};
@@ -69,7 +69,7 @@
 		for (var i = 0, emp; i < result.employees.length; i++)
 		{			
 			emp = result.employees[i];			
-			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ) );		
+			$( "#puntuaciones" ).last().prepend( $( "<div class=\"usuarios  "+emp.department+"  \"> "+ emp.name + " - " + emp.points  +" </div>" ) );		
 		}
 	}
 	
