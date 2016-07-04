@@ -20,10 +20,10 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Selecciona el resultado</h3>
 
 <p>
-Portugal <input type="number" min="0" max="15" name="PortugalGoals"> - <input type="number" min="0" max="15" name="GalesGoals"> Gales
+Portugal <input type="number" min="0" max="15" value=0 id="PortugalGoals"> - <input type="number" value=0 min="0" max="15" id="GalesGoals"> Gales
 </p>
 <p>
-Alemania <input type="number" min="0" max="15" name="AlemaniaGoals"> - <input type="number" min="0" max="15" name="FranciaGoals"> Francia
+Alemania <input type="number" min="0" max="15" value=0  id="AlemaniaGoals"> - <input type="number" value=0  min="0" max="15" id="FranciaGoals"> Francia
 </p>
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Puntuaciones</h3>
@@ -39,5 +39,27 @@ Alemania <input type="number" min="0" max="15" name="AlemaniaGoals"> - <input ty
     </section>
   
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"  integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="  crossorigin="anonymous"></script>
+  <script>
+	$("#PortugalGoals").change(function() {
+	
+	var studentTypes = new Array();
+	studentTypes["NAME"] = "TEXT";
+	studentTypes["MARKS"] = "NUMBER";
+	studentTypes["DOB"] = "DATE";
+	alert("Type of MARKS is :" + studentTypes["MARKS"] );
+	
+	});
+	$("#GalesGoals").change(function() {
+	
+	});
+	$("#AlemaniaGoals").change(function() {
+	
+	});
+	$("#FranciaGoals").change(function() {
+	
+	});
+	
+	
+  </script>
   </body>
 </html>
