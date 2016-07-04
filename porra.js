@@ -64,7 +64,6 @@
 		for (var i = 0, emp; i < result.employees.length; i++)
 		{			
 			emp = result.employees[i];			
-			alert(emp.name);
 			$( "#puntuaciones" ).prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ) );		
 		}
 	}
