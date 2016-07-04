@@ -64,10 +64,10 @@
 		for (var i = 0, emp; i < result.employees.length; i++)
 		{			
 			emp = result.employees[i];			
-			$( "#puntuaciones" ).prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ) );		
+			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ) );		
 		}
 	}
 	
 	 function SortByPoints(x,y) {
-	  return parseFloat(x.points) + parseFloat(y.points);
+	  return parseFloat(x.points) - parseFloat(y.points);
     }
