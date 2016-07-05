@@ -50,6 +50,8 @@
 			}
 		}	
 		PrintValues();
+		Winner();
+		
 	}
 	
 	function CleanValues()
@@ -71,6 +73,11 @@
 			emp = result.employees[i];			
 			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ).addClass("usuarios").addClass(emp.department));		
 		}
+	}
+	
+	function Winner()
+	{
+		$( ".usuarios" ).first().addClass("Winner");
 	}
 	
 	 function SortByPoints(x,y) {
