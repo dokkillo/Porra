@@ -69,7 +69,7 @@
 		for (var i = 0, emp; i < result.employees.length; i++)
 		{			
 			emp = result.employees[i];			
-			$( "#puntuaciones" ).last().prepend( $( "<div class=\"usuarios  "+emp.department+"  \"> "+ emp.name + " - " + emp.points  +" </div>" ) );		
+			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ).addClass("usuarios").addClass(emp.department));		
 		}
 	}
 	
