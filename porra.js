@@ -27,7 +27,12 @@
 	});
 	$("#FranciaGoals").change(function() {
 		CalculateValues();
+	});	
+	
+	$(".usuarios").hover(function() {
+		alert(this.id);
 	});
+	
 	
 	function CalculateValues()
 	{
@@ -71,7 +76,7 @@
 		for (var i = 0, emp; i < result.employees.length; i++)
 		{			
 			emp = result.employees[i];			
-			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ).addClass("usuarios").addClass(emp.department));		
+			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ).addClass("usuarios").addClass(emp.department).attr('id', emp.id));		
 		}
 	}
 	
