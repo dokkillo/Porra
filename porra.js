@@ -56,6 +56,12 @@
 	$("#FranciaGoals").change(function() {
 		CalculateValues();
 	});	
+	$("#team1").change(function() {
+		CalculateValues();
+	});	
+	$("#team2").change(function() {
+		CalculateValues();
+	});	
 	
 	$(".usuarios").hover(function() {
 		alert(this.id);
@@ -72,6 +78,8 @@
 			var galesGoal = $("#GalesGoals").val();
 			var alemaniaGoal = $("#AlemaniaGoals").val();
 			var franciaGoal = $("#FranciaGoals").val();
+			var team1 = $("#team1").val();
+			var team2 = $("#team2").val();
 			emp = result.employees[i];
 			if(emp.PortugalGoals == portugalGoal && emp.GalesGoals == galesGoal )
 			{
@@ -80,6 +88,14 @@
 			if(emp.AlemaniaGoals == alemaniaGoal && emp.FranciaGoals == franciaGoal )
 			{
 				emp.points = emp.points + 2;
+			}
+			if(emp.team1 == team1)
+			{
+				emp.points = emp.points + 3;
+			}
+			if(emp.team2 == team2)
+			{
+				emp.points = emp.points + 3;
 			}
 		}	
 		PrintValues();
