@@ -62,11 +62,10 @@
 	$("#team2").change(function() {
 		CalculateValues();
 	});	
-	
-	$(".usuarios").hover(function() {
-		alert(this.id);
-	});
-	
+
+	$("#teamWin").change(function() {
+		CalculateValues();
+	});	
 	
 	function CalculateValues()
 	{
@@ -80,6 +79,9 @@
 			var franciaGoal = $("#FranciaGoals").val();
 			var team1 = $("#team1").val();
 			var team2 = $("#team2").val();
+			var teamWin = $("#teamWin").val();
+			var team1Goals= $("team1Goals").val();
+			var team2Goals= $("team2Goals").val();
 			emp = result.employees[i];
 			if(emp.PortugalGoals == portugalGoal && emp.GalesGoals == galesGoal )
 			{
@@ -96,6 +98,17 @@
 			if(emp.team2 == team2)
 			{
 				emp.points = emp.points + 3;
+			}
+			if(emp.team1Goals == team1Goals && emp.team2Goals == team2Goals )
+			{
+				if(emp.team2 == team2 || emp.team1 == team1)
+				{
+					emp.points = emp.points + 3;
+				}
+			}
+			if(emp.teamWin == teamWin)
+			{
+				emp.points = emp.points + 5;
 			}
 		}	
 		PrintValues();
@@ -129,6 +142,6 @@
 		$( ".usuarios" ).first().addClass("Winner");
 	}
 	
-	 function SortByPoints(x,y) {
+	function SortByPoints(x,y) {
 	  return parseFloat(x.points) - parseFloat(y.points);
     }
