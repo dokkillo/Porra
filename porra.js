@@ -140,7 +140,7 @@
 		for (var i = 0, emp; i < result.employees.length; i++)
 		{			
 			emp = result.employees[i];			
-			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ).addClass("usuarios").addClass(emp.department).attr('id', emp.id));		
+			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + "  <span class=\"score\" > Puntos: " + emp.points  +" </span> </div>" ).addClass("usuarios").addClass(emp.department).attr('id', emp.id));		
 			$("#" + emp.id).last().append($( "<div> SEMIFINALES Portugal "+ emp.PortugalGoals + " - " + emp.GalesGoals  +" Gales || Alemania "+ emp.AlemaniaGoals + " - " + emp.FranciaGoals + " Francia  </div>" ).addClass("datos"));
 			$("#" + emp.id).last().append($( "<div> FINAL  " + emp.team1 + " "+ emp.team1Goals + " - " + emp.Team2Goals +" "  + emp.team2 +" </div>" ).addClass("datos"));
 			$("#" + emp.id).last().append($( "<div> GANADOR  " + emp.teamWin + " </div>" ).addClass("datos"));

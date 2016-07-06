@@ -145,6 +145,13 @@ input[type="number"]
    height: 200px;
 
 }
+
+.score {
+ float:right;
+ font-weight: bold;
+ 
+}
+
 .usuarios:hover .datos{
 	display : block;
 	color:white;
