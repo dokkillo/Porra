@@ -67,6 +67,13 @@
 		CalculateValues();
 	});	
 	
+	$("#team1Goals").change(function() {
+		CalculateValues();
+	});	
+	$("#Team2Goals").change(function() {
+		CalculateValues();
+	});
+	
 	function CalculateValues()
 	{
 		CleanValues();
@@ -80,8 +87,8 @@
 			var team1 = $("#team1").val();
 			var team2 = $("#team2").val();
 			var teamWin = $("#teamWin").val();
-			var team1Goals= $("team1Goals").val();
-			var team2Goals= $("team2Goals").val();
+			var team1Goals= $("#team1Goals").val();
+			var Team2Goals= $("#Team2Goals").val();
 			emp = result.employees[i];
 			if(emp.PortugalGoals == portugalGoal && emp.GalesGoals == galesGoal )
 			{
@@ -99,7 +106,7 @@
 			{
 				emp.points = emp.points + 3;
 			}
-			if(emp.team1Goals == team1Goals && emp.team2Goals == team2Goals )
+			if(emp.team1Goals == team1Goals && emp.Team2Goals == Team2Goals )
 			{
 				if(emp.team2 == team2 || emp.team1 == team1)
 				{
@@ -134,6 +141,9 @@
 		{			
 			emp = result.employees[i];			
 			$( "#puntuaciones" ).last().prepend( $( "<div> "+ emp.name + " - " + emp.points  +" </div>" ).addClass("usuarios").addClass(emp.department).attr('id', emp.id));		
+			$("#" + emp.id).last().append($( "<div> SEMIFINALES Portugal "+ emp.PortugalGoals + " - " + emp.GalesGoals  +" Gales || Alemania "+ emp.AlemaniaGoals + " - " + emp.FranciaGoals + " Francia  </div>" ).addClass("datos"));
+			$("#" + emp.id).last().append($( "<div> FINAL  " + emp.team1 + " "+ emp.team1Goals + " - " + emp.Team2Goals +" "  + emp.team2 +" </div>" ).addClass("datos"));
+			$("#" + emp.id).last().append($( "<div> GANADOR  " + emp.teamWin + " </div>" ).addClass("datos"));
 		}
 	}
 	
