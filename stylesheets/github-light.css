@@ -150,7 +150,22 @@ input[type="number"]
 	border: 4px solid #73AD21;
 }
 
-.Pensiones {
+.OPA {
+	background: #c5ffe9;
+	border: 4px solid #c5ffe9;
+}
+
+.HCG {
+	background: #7ccd7c;
+	border: 4px solid #7ccd7c;
+}
+
+.RTM {
+	background: pink;
+	border: 4px solid pink;
+}
+
+.RET {
 	background: blue;
 	border: 4px solid blue;
 	color:white;
@@ -160,8 +175,12 @@ input[type="number"]
 	border: 8px solid #FFDF00 !important;
 }
 
-.talent {
-	background: pink;
-	border: 4px solid pink;
+.TAL {
+	background: #8f6190;
+	border: 4px solid #8f6190;
 }
 
+.INV {
+	background: grey;
+	border: 4px solid grey;
+}
